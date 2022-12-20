@@ -19,6 +19,7 @@ jobs:
 
   Build:
     steps:
+      - run echo "Setting up jdk 17."
       - name: Set Up JDK
       - uses: actions/setup-java@v3
         with:
