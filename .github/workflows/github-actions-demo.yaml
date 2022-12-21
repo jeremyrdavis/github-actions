@@ -26,6 +26,6 @@ jobs:
           cache: maven
           architecture: x64
       - name: Compile
-      - run: mvn --batch-mode --update-snapshots clean compile
+        run: mvn --batch-mode --update-snapshots clean compile
       - name: Test
-      - run: mvn --batch-mode --update-snapshots test
+        run: mvn --batch-mode --update-snapshots test
