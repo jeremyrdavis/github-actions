@@ -17,13 +17,3 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-  compile:
-    name: Compile Source Code
-    steps:
-      - name: Set Up JDK
-      - uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-          cache: maven
-          architecture: x64
