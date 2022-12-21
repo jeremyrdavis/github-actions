@@ -2,8 +2,8 @@ name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
-    name: Explore Github Actions
+  checkout_code:
+    name: Checkout Code
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -17,9 +17,9 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-
-  Build-And-Test:
-    name: Build and Test
+  compile:
+    needs:
+    name: Compile Source Code
     steps:
       - run echo "Setting up jdk 17."
       - name: Set Up JDK
@@ -29,4 +29,4 @@ jobs:
           distribution: 'adopt'
           cache: maven
           architecture: x64
-      - run: mvn --batch-mode --update-snapshots clean test
+      - run: mvn --batch-mode --update-snapshots clean compile
