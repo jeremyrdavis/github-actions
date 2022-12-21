@@ -21,7 +21,6 @@ jobs:
     name: Compile Source Code
     steps:
       - name: Set Up JDK
-      - run echo "Setting up jdk 17."
       - uses: actions/setup-java@v3
         with:
           java-version: '17'
