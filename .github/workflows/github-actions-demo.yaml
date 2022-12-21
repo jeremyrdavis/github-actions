@@ -35,5 +35,6 @@ jobs:
         run: mvn --batch-mode package
   job_2:
     name: Job #2
-    run: echo "Job #2"
+    steps:
+      run: echo "Job #2"
 
