@@ -33,4 +33,7 @@ jobs:
         run: mvn --batch-mode verify
       - name: Verify
         run: mvn --batch-mode package
+  job_2:
+    name: Job #2
+    run: echo "Job #2"
 
