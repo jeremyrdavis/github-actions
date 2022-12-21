@@ -28,4 +28,9 @@ jobs:
       - name: Compile
         run: mvn --batch-mode --update-snapshots clean compile
       - name: Test
-        run: mvn --batch-mode --update-snapshots test
+        run: mvn --batch-mode test
+      - name: Verify
+        run: mvn --batch-mode verify
+      - name: Verify
+        run: mvn --batch-mode package
+
